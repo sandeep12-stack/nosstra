@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra - Fashion E-commerce</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero-slider {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out;
+        }
+        
+        .brand-logo {
+            transition: transform 0.3s ease;
+        }
+        
+        .brand-logo:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Top Banner -->
+    <div class="bg-gray-900 text-white py-2 px-4 text-center relative">
+        <span class="text-sm">Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order</span>
+        <button onclick="this.parentElement.style.display='none'" class="absolute right-4 top-2 text-white hover:text-gray-300 text-xl">×</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 px-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold cursor-pointer">Nostra</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-gray-900">Home</a>
+                <a href="index.html#new-arrivals" class="text-gray-700 hover:text-gray-900">New Arrival</a>
+                <a href="index.html#most-wanted" class="text-gray-700 hover:text-gray-900">Most Wanted</a>
+                <a href="collection.html" class="text-gray-700 hover:text-gray-900">Collections</a>
+                <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage">
+        <!-- Hero Slider -->
+        <div class="relative h-96 hero-slider" id="heroSlider" style="background-image: url('1.jpg'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="text-center text-white z-10">
+                    <h1 class="text-5xl font-bold mb-6">Level up your style with our</h1>
+                    <p class="text-xl mb-4">Summer Collections</p>
+                    <button class="bg-white text-black px-8 py-3 rounded hover:bg-gray-100 transition">Shop Now</button>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button onclick="previousSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300 z-20">‹</button>
+            <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-6xl hover:text-gray-300 z-20">›</button>
+        </div>
+
+        <!-- Brands Section -->
+        <div class="container mx-auto px-8 py-16">
+            <h2 class="text-2xl font-bold mb-8">Brands</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
+                <div class="text-center brand-logo cursor-pointer">
+                    <div class="w-16 h-16 mx-auto bg-black rounded-full flex items-center justify-center text-white font-bold mb-2">Be</div>
+                    <p class="font-semibold">Puma</p>
+                </div>
+                <div class="text-center brand-logo cursor-pointer">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center mb-2">
+                        <svg class="w-12 h-12" viewBox="0 0 50 50"><path d="M25 5 L15 20 L20 20 L18 35 L30 18 L25 18 L35 5 Z" fill="black"/></svg>
+                    </div>
+                    <p class="font-semibold">Adidas</p>
+                </div>
+                <div class="text-center brand-logo cursor-pointer">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center mb-2">
+                        <div class="w-12 h-12 bg-black rounded-full"></div>
+                    </div>
+                    <p class="font-semibold">Simple</p>
+                </div>
+                <div class="text-center brand-logo cursor-pointer">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center mb-2">
+                        <svg class="w-12 h-12" viewBox="0 0 50 50"><path d="M10 25 Q15 15 25 20 Q35 15 40 25 Q35 35 25 30 Q15 35 10 25 Z" fill="black"/></svg>
+                    </div>
+                    <p class="font-semibold">Leaves</p>
+                </div>
+                <div class="text-center brand-logo cursor-pointer">
+                    <div class="w-16 h-16 mx-auto bg-black rounded-full flex items-center justify-center text-white font-bold mb-2">Be</div>
+                    <p class="font-semibold">Behance</p>
+                </div>
+                <div class="text-center brand-logo cursor-pointer">
+                    <div class="w-16 h-16 mx-auto border-4 border-black flex items-center justify-center mb-2">
+                        <span class="font-bold text-2xl">II</span>
+                    </div>
+                    <p class="font-semibold">Twitch</p>
+                </div>
+                <div class="text-center brand-logo cursor-pointer">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center mb-2">
+                        <svg class="w-12 h-12" viewBox="0 0 50 50"><path d="M10 25 Q15 15 25 20 Q35 15 40 25 Q35 35 25 30 Q15 35 10 25 Z" fill="black"/></svg>
+                    </div>
+                    <p class="font-semibold">Leaves</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Experience Section -->
+        <div class="bg-gray-50 py-16">
+            <div class="container mx-auto px-8">
+                <div class="flex justify-between items-center mb-12">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">We Provide Best</h2>
+                        <h2 class="text-3xl font-bold">Customer Experiences</h2>
+                    </div>
+                    <p class="text-gray-600 max-w-md">|| We ensure that our customer have the best shopping experience</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white text-2xl mb-4">✓</div>
+                        <h3 class="font-bold text-lg mb-2">Original Products</h3>
+                        <p class="text-gray-600 text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Horro, consequuntur.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white text-2xl mb-4">☺</div>
+                        <h3 class="font-bold text-lg mb-2">Satisfaction Guarantee</h3>
+                        <p class="text-gray-600 text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Horro, consequuntur.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white text-2xl mb-4">🏷</div>
+                        <h3 class="font-bold text-lg mb-2">New Arrival Everyday</h3>
+                        <p class="text-gray-600 text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Horro, consequuntur.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg">
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white text-2xl mb-4">🚚</div>
+                        <h3 class="font-bold text-lg mb-2">Fast & Free Shipping</h3>
+                        <p class="text-gray-600 text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Horro, consequuntur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Arrivals Section -->
+        <div class="container mx-auto px-8 py-16">
+            <h2 class="text-3xl font-bold mb-8">New Arrivals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-200 h-96 rounded-lg overflow-hidden relative group">
+                    <img src="1.jpg" alt="New Arrival" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    <button class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded hover:bg-gray-100 transition">Shop Now →</button>
+                </div>
+                <div class="bg-gray-200 h-96 rounded-lg overflow-hidden relative group">
+                    <img src="2.jpg" alt="New Arrival" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    <button class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded hover:bg-gray-100 transition">Shop Now →</button>
+                </div>
+                <div class="bg-gray-200 h-96 rounded-lg overflow-hidden relative group">
+                    <img src="3.jpg" alt="New Arrival" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    <button class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded hover:bg-gray-100 transition">Shop Now →</button>
+                </div>
+                <div class="bg-gray-200 h-96 rounded-lg overflow-hidden relative group">
+                    <img src="4.jpg" alt="New Arrival" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    <button class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-6 py-2 rounded hover:bg-gray-100 transition">Shop Now →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Most Wanted Section -->
+        <div class="container mx-auto px-8 py-16">
+            <h2 class="text-3xl font-bold mb-8">Most Wanted</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="product-card">
+                    <div class="relative">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 text-sm rounded z-10">sale</span>
+                        <img src="1.jpg" alt="Product" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <button class="absolute top-2 right-2 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 z-10">♡</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="relative">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 text-sm rounded z-10">sale</span>
+                        <img src="2.jpg" alt="Product" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <button class="absolute top-2 right-2 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 z-10">♡</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="relative">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 text-sm rounded z-10">sale</span>
+                        <img src="3.jpg" alt="Product" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <button class="absolute top-2 right-2 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 z-10">♡</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="relative">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 text-sm rounded z-10">sale</span>
+                        <img src="4.jpg" alt="Product" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <button class="absolute top-2 right-2 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 z-10">♡</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="relative">
+                        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 text-sm rounded z-10">sale</span>
+                        <img src="5.jpg" alt="Product" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <button class="absolute top-2 right-2 w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 z-10">♡</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limited Offer Section -->
+        <div class="bg-gray-900 text-white py-16">
+            <div class="container mx-auto px-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <img src="5.jpg" alt="Limited Offer" class="h-64 w-full object-cover rounded-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-bold mb-4">Limited Offer</h2>
+                        <p class="text-xl mb-6">35% OFF on this for the first 30 Customers</p>
+                        <button class="bg-white text-black px-8 py-3 rounded hover:bg-gray-100 transition">Shop Now →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="container mx-auto px-8 py-16 text-center">
+            <h2 class="text-4xl font-bold mb-4">Join our News Letter</h2>
+            <p class="text-gray-600 mb-8">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+            <div class="max-w-2xl mx-auto">
+                <input type="email" placeholder="Enter your email" class="w-full px-6 py-3 border border-gray-300 rounded mb-4">
+                <button class="bg-gray-900 text-white px-8 py-3 rounded hover:bg-gray-800 transition">Subscribe →</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-8">
+            <h3 class="text-3xl font-bold mb-4">Nostra</h3>
+            <p class="text-gray-400 mb-8 max-w-2xl">The Standard chunk of Lorem ipsum used since the 1500s is reproduscd below for those interest</p>
+            
+            <div class="flex space-x-6 mb-8">
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </a>
+                <a href="#" class="text-white hover:text-gray-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+            </div>
+            
+            <p class="text-gray-400">@ 2023 Nostra.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Slider
+        const heroImages = [
+            '1.jpg',
+            '2.jpg',
+            '3.jpg',
+            '4.jpg',
+            '5.jpg'
+        ];
+        
+        let currentSlide = 0;
+        const slider = document.getElementById('heroSlider');
+        
+        function updateSlider() {
+            if (slider) {
+                slider.style.backgroundImage = `url('${heroImages[currentSlide]}')`;
+            }
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % heroImages.length;
+            updateSlider();
+        }
+        
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + heroImages.length) % heroImages.length;
+            updateSlider();
+        }
+        
+        // Auto-advance slider
+        setInterval(nextSlide, 5000);
+        
+        // Initialize
+        updateSlider();
+    </script>
+</body>
+</html>
